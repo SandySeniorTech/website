@@ -1,0 +1,162 @@
+﻿/* These are local styles that, hopefully, compliment the Bootstrap styles. */
+
+/* -------------------- TOP NAV -------------------- */
+/* Make room for the fixed top navigation by pushing the body down. */
+body {
+   padding-top: 60px;
+}
+
+/* At this screen width, the top navigation wraps, so there are two rows:
+   The title stays on the top row, the navigation jumps down below.
+*/
+@media screen and (max-width: 880px) {             /* was 854px */
+   body {
+      padding-top: 100px;
+   }
+}
+
+/* And then at this width, Bootstrap changes to display the "hamburger" menu
+   So the top nav is back to one row.
+*/
+@media screen and (max-width: 768px) {
+   body {
+      padding-top: 60px;
+   }
+}
+
+/* This rule is to cover the iPad in portrait mode -- no hamburger menu, two row top nav. */
+@media screen and (orientation:portrait) {
+   body {
+      padding-top: 100px;
+   }
+})
+/* -------------------- END TOP NAV -------------------- */
+
+
+/* -------------------- BOOKMARK ADJUSTMENT -------------------- */
+/* Adjust any on-page bookmarks to compensate for the fixed top nav */
+/* Idea credit to:  https://css-tricks.com/hash-tag-links-padding/ */
+.bookmarkPadding:before {
+   display: block;
+   content: " ";
+   margin-top: -60px;
+   height: 60px;
+   visibility: hidden;
+}
+
+/* Two row top nav at this width, so, move down more... */
+@media screen and (max-width: 880px) {
+   .bookmarkPadding:before {
+      display: block;
+      content: " ";
+      margin-top: -100px;
+      height: 100px;
+      visibility: hidden;
+   }
+}
+
+/* And back to one row, with the XS hamburger menu... */
+@media screen and (max-width: 768px) {
+   .bookmarkPadding:before {
+      display: block;
+      content: " ";
+      margin-top: -60px;
+      height: 60px;
+      visibility: hidden;
+   }
+}
+
+/* Two row top nav at this width, so, move down more... */
+/* This rule is to cover the iPad in portrait mode -- no hamburger menu, two row top nav. */
+@media screen and (orientation: portrait) {
+   .bookmarkPadding:before {
+      display: block;
+      content: " ";
+      margin-top: -100px;
+      height: 100px;
+      visibility: hidden;
+   }
+}
+
+/* -------------------- END BOOKMARK ADJUSTMENT -------------------- */
+
+footer {
+   font-size: .75em;
+   border-top: 1px dotted blue;
+   margin-top: 4px;
+}
+
+/* Google Map Styles */
+#map_canvas {
+	order: 2;
+	width: 400px;
+	height: 500px;
+}
+/* END Google Map Styles */
+
+
+.textOverImageContainerLarge {
+   position: relative;
+   max-width: 800px;
+}
+
+.textOverImageContainerMedium {
+   position: relative;
+   max-width: 700px;
+}
+
+.textOverImage {
+   position: absolute;
+   bottom: 20%;
+   width: 100%;
+   background-color: rgb(128, 128, 128); /* fallback color if Alpha not supported */
+   background-color: rgba(128, 128, 128, .6); /* Red, Green, Blue, Alpha, where alpha is between 0 = fully transparent and 1 = fully opaque */
+   text-align: center;
+   color: white;
+   font-size: 2em;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+/* If the screen is small, redce the size of the font and display is lower on the image. */
+@media screen and (max-width: 768px) {
+   .textOverImage {
+      position: absolute;
+      bottom: 0%;
+      width: 100%;
+      background-color: rgb(128, 128, 128); /* fallback color if Alpha not supported */
+      background-color: rgba(128, 128, 128, .6); /* Red, Green, Blue, Alpha, where alpha is between 0 = fully transparent and 1 = fully opaque */
+      text-align: center;
+      color: white;
+      font-size: 1em;
+      padding-top: 5px;
+      padding-bottom: 5px;
+   }
+}
+
+.imageShadow {
+	box-shadow: 3px 3px 5px 6px #cccccc;
+}
+
+.centerAlignBlock {
+   display: flex;
+   /*justify-content: space-around;*/
+   align-items: center;
+}
+
+.thickBorder {
+   border-bottom: 4px solid #6666cc;
+}
+
+
+.full-frame {
+   position: absolute;
+   padding-top: 60px;      /*Allow room for the fixed top navigation*/
+   top: 0;
+   left: 0;
+   border: 0;
+   outline: 0;
+   height: 100%;
+   min-width: 100%;
+   width: 100px;
+}
