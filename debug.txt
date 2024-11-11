@@ -1,0 +1,107 @@
+﻿
+
+
+
+Testing http://beta3.sandyseniorcenter.org/ using Windows 10 on my laptop using traditional I.E. 11, Firefox 40.0.2, Edge 20.10240, and Google Chrome 44.0.2403.157
+
+1.    Page: http://beta3.sandyseniorcenter.org/activities.html 
+        I'm still not sure of the difference between
+		   
+			" Sandy Senior Center Daily Activities " and 
+			" Sandy Senior Center Activities " 
+			
+			calendars. I think I know what " Sandy Senior Center Arts and Crafts " is, but is this really a discrete calendar? 
+			I guess, ultimately, it is for the operators (the SSC staff) to determine these distinctions.
+
+			THESE ARE REFLECTIONS OF HOW THE OLD/CURRENT SITE HAD THINGS SHOWN
+			We can designate categories any way that makes sense.  
+			At one point, I believe, Charles mentioned the possibility of matching the 
+			categories as shown on the check-in touch screen system.
+			I have been a proponent of calling out the professional services
+			(haircuts, podiatrist, tax advice, porfessional aura cleanser)
+
+
+2.     Also: http://beta3.sandyseniorcenter.org/activities.html 
+        When clicking if "Daily Activities", we go to http://beta3.sandyseniorcenter.org/activities.html#DailyActivities
+        
+		  I.E. and Edge do not change the display (it stays at the top of the page). 
+		  FIXED
+		  
+		  Firefox and Chrome do shift the page so the " Sandy Senior Center Daily Activities" calendar is at the top. 
+		  Interestingly only Chrome does this properly - showing the title of the calendar. 
+		  
+		  Firefox shifts the calendar up so the title is hidden under the blue options bar. 
+		  FIXED
+
+3.		Also: the same place and same symptoms for "Arts and Crafts" and "Special Activities".
+		FIXED
+
+4.    Going to: http://beta3.sandyseniorcenter.org/computerCenter.html
+        When clicking on "Computer Center", then all four of the detail options links, 
+		  all browsers display correctly EXCEPT Firefox. 
+		  That one does shift the display to the desired place each time 
+		  but it hides the title under the blue options bar. 
+		  FIXED
+
+        This is consistent with Firefox. 
+		  Other places further down the page where it links to "Open Lab" and "current schedule" 
+		  it also hides the title of the sections it displays. 
+		  Interestingly, though, the course number links DON'T do this. They show the title correctly.
+		  FIXED
+
+5.    Also: http://beta3.sandyseniorcenter.org/computerCenter.html
+        This true for all 4 browsers:  
+		  ONLY the links to the PDF manuals (the other links throughout the site seem to not exhibit this) 
+		  (and I don't know if you have any control over this) have a very thin area where the link is active. 
+		  You can point your mouse pointer right on one of the words in the link and it will not activate. 
+		  I seems the active area is a thin line just at the top if the lower case letters. Ever heard if that?
+        It also makes it quite difficult to activate these links with touch on a touch screen.
+		  FIXED -- although it is kind of a hack
+						FYI, this one took me a while to figure out what was going on.
+						These are simple hyperlinks "a" tags in HTML.  How were they 
+						getting a fraction working?  It turns out it has to do, once again,
+						with the fiddling necessary to handle the fixed top navigation.
+						When a user clicks on an on-page hyperlink bookmark, it must 
+						stick a hidden box above the link that is the same height as the 
+						top navigation.  This hidden box was covering the hyperlinks for the manuals.
+
+
+6.    Now: http://beta3.sandyseniorcenter.org/resources.html
+       The Arts and Crafts link in the last picture behaves just like # 2 above.
+		 FIXED -- although since this is the last calendar on the page, the top of the
+						calendar dosen't come to the top of the browser  
+
+7.    And: http://beta3.sandyseniorcenter.org/people.html
+        The five links here behave just like the links noted in # 4 above. 
+		  EXCEPT for the link to Community Reps. 
+		  This one works OK 'cause it's displaying the bottom of the page.
+		  FIXED
+
+8.    On http://beta3.sandyseniorcenter.org/people.html
+        Could/should we make Charles' and Autumn's email addresses email links?
+		  THIS MAY NOT BE A GOOD PRACTICE -- automated "spiders" may scan the page
+		  and pick up these as email addresses.
+		  You may see some sites that go even further and show email
+		  addresses as something like:   somebody AT somewhere.com
+
+		  Technically it is easy to make these email links.
+		  I suppose it is up to Charles/Autumn and the trade off
+		  between ease of use and fear of spam.
+  
+9.    Also: http://beta3.sandyseniorcenter.org/people.html
+        Maggie Steel is now the receptionist/secretary (as well as on the Advisory Council). 
+		  Should she be pictured?
+		  YEP -- I NEED TO GET A PICTURE AND WHATEVER OTHER INFO
+
+10.    On: http://beta3.sandyseniorcenter.org/contact.html
+         "Also note that on the first and third Thursday of each month the Center is open from 7 p.m. to 9 p.m. "  
+			Didn't we establish that on those days we're open from 7 a.m.  to 7 p.m.? Or did I misunderstand that?
+			OH, LIKE I REMEMBER?  I'm going to go with FIXED.
+
+11.    On to: http://beta3.sandyseniorcenter.org/about.html
+          "volunteering" link, same as #4 above.
+			 FIXED
+
+
+
+I have tried these things on all browsers (except Edge) on both Windows 7 and Windows 8.1 (including the IE App version.) The results are the same.
